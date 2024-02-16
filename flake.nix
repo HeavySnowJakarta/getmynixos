@@ -3,23 +3,13 @@
 {
     description = "NixOS flake configuration";
 
-    inputs = {
-        # NixOS software source. Both original sourceand TUNA mirror
-        # are provided.
-        # nixpkgs.url = "github:NixOS/nixpkgs/master";
-        nixpkgs.url = "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git/";
-    };
+    # For now the only thing flake.input has is the url of source code.
+    inputs = import ./config/source_url.nix;
 
     outputs = {self, nixpkgs, ...}@inputs: {
-        nixosConfigurations = {
-            # WSL host
-            nixos-wsl = nixpkgs.lib.nixosSystem {
-                system = "x86_64-linux";
-                modules = [
-                    # Let the precious config file take effect
-                    ./configuration.nix
-                ]
-            }
+        nixosConfigurations = import ./interface/host.nix {
+            type = (import ./options.nix).type;
+            is_NixOS = (import ./options.nix).is_NixOS
         }
     }
 }

@@ -1,3 +1,4 @@
-Software configurations, shared with all users.
+Configurations of this project itself. e.g. the mirror repository.
 
-But stored in `~`.
+This directory does not contain configuration files of a specific software,
+toolchain or host. It only contains the configurations shared with them.
