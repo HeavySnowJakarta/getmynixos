@@ -2,5 +2,5 @@
 
 {
     # nixpkgs.url = "github:NixOS/nixpkgs/master";
-    nixpkgs.url = "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git/";
+    nixpkgs.url = "git+https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git/";
 }
