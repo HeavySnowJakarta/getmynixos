@@ -7,5 +7,5 @@
     type = "wsl";
 
     # `is_NixOS` stands for whether the whole system is managed by Nix.
-    is_NixOS = true
+    is_NixOS = true;
 }

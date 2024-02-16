@@ -16,7 +16,7 @@
         trusted-users = import ./config/user_list.nix;
         sustituters = import ./config/binary_cache_url.nix;
         trusted-public-keys = import ./config/binary_cache_key.nix;
-    }
+    };
 
     # Core environment configuration
     environment = {

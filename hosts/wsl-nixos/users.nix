@@ -17,6 +17,6 @@ in
         user = default ++ {
             packages = with pkgs; [
                 fish
-            ]
-        }
+            ];
+        };
     }

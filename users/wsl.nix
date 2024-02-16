@@ -6,6 +6,6 @@
     # Basic user info
     home = {
         username = "user";
-        homeDirectory = "/home/user/"
-    }
+        homeDirectory = "/home/user/";
+    };
 }

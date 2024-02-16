@@ -9,7 +9,7 @@
     outputs = {self, nixpkgs, ...}@inputs: {
         nixosConfigurations = import ./interface/host.nix {
             type = (import ./options.nix).type;
-            is_NixOS = (import ./options.nix).is_NixOS
-        }
-    }
+            is_NixOS = (import ./options.nix).is_NixOS;
+        };
+    };
 }

@@ -3,5 +3,5 @@ nixos = nixpkgs.lib.nixosSystem {
     modules = [
         ../../configuration.nix
         ./configuration.nix
-    ]
+    ];
 }
