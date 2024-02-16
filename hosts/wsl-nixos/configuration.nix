@@ -12,7 +12,7 @@
         defaultUser = "user";
     };
 
-    system.stateVersion = "unstable";
+    system.stateVersion = "23.11";
 
     users.users = import ./users.nix;
     services = import ./services.nix;
