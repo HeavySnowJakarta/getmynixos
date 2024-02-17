@@ -17,7 +17,7 @@ let
 # Each user's specific settings.
 in
     {
-        user = default ++ {
+        user = default // {
             packages = with pkgs; [
                 fish
             ];
