@@ -13,10 +13,15 @@
     }
     system.stateVersion = "23.11";
 
-    # Source repositories
-    trusted-users = import ./config/user_list.nix;
-    sustituters = import ./config/binary_cache_url.nix;
-    trusted-public-keys = import ./config/binary_cache_key.nix;
+    nix.settings = {
+        # Source repositories
+        #trusted-users = import ./config/user_list.nix;
+        #sustituters = import ./config/binary_cache_url.nix;
+        #trusted-public-keys = import ./config/binary_cache_key.nix;
+
+        # Disable experimental features
+        experimental-features = []
+    }
 
     # Environment Configuration
     environment = {
