@@ -10,7 +10,7 @@
         experimental-features =
             ["flakes"]
             ++
-            import ./config/nix_exp_features;
+            import ./config/nix_exp_features.nix;
 
         # Binary cache configuration
         trusted-users = import ./config/user_list.nix;
