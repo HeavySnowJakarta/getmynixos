@@ -10,13 +10,21 @@ On the NixOS system, you'll have to initialize `/etc/nix/` as a Git repository t
 # Set the binary cache repository temporarily
 sudo nixos-rebuild switch --option substituters "https://nix-community.cachix.org" --option trusted-public-keys "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
 # Install Git temporarily
-nix-env -i git
+nix-shell -p git
 # Initialize `/etc/nix/` as a repository
-cd /etc/nix
-git init .
+cd /etc/nixos
+sudo git init . -b main
+sudo git add .
 # Add the GitHub repository as remote and fetch the files
-git remote add origin https://github.com/HeavySnowJakarta/getmynixos
+sudo git remote add origin https://github.com/HeavySnowJakarta/getmynixos
 git pull origin
 # Apply the configuration files
 sudo nixos-rebuild switch
+```
+
+## File Structure
+
+```
+.
+
 ```
