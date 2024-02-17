@@ -5,7 +5,7 @@
 {type, is_NixOS}:
 
 if
-    type=="wsl" and is_NixOS
+    type=="wsl" && is_NixOS
 then
     import ../hosts/wsl-nixos
 else

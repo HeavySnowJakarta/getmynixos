@@ -4,7 +4,7 @@
 {type, is_NixOS, parameters}:
 
 if
-    type == "wsl" and is_NixOS
+    type == "wsl" && is_NixOS
 then
     import ../homes/wsl.nix parameters
 else
