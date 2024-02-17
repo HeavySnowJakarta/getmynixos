@@ -5,5 +5,5 @@
             ../../configuration.nix
             ./configuration.nix
         ];
-    }
+    };
 }
