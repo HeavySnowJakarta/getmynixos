@@ -24,7 +24,7 @@
         nixosConfigurations = import ./interface/host.nix {
             type = (import ./options.nix).type;
             is_NixOS = (import ./options.nix).is_NixOS;
-            parameters = {nixpkgs=nixpkgs};
+            parameters = {nixpkgs=nixpkgs;};
         };
     };
 }
