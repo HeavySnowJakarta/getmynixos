@@ -8,10 +8,10 @@
     #    <nixos-wsl/modules>
     #];
 
-    wsl = {
-        enable = true;
-        defaultUser = "user";
-    };
+    #wsl = {
+    #    enable = true;
+    #    defaultUser = "user";
+    #};
 
     system.stateVersion = "23.11";
 
