@@ -3,9 +3,10 @@
 {pkgs, config, ...}:
 
 {
-    imports = [
-        <nixos-wsl/modules>
-    ];
+    # Not working with `flake`
+    #imports = [
+    #    <nixos-wsl/modules>
+    #];
 
     wsl = {
         enable = true;
