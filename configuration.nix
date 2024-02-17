@@ -29,6 +29,6 @@
         ];
 
         # Default editor
-        variables.EDITOR = "nano"
+        variables.EDITOR = "nano";
     }
 }
