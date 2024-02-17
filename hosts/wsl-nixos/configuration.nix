@@ -8,6 +8,7 @@
     #    <nixos-wsl/modules>
     #];
 
+    # Not working weirdly
     #wsl = {
     #    enable = true;
     #    defaultUser = "user";
@@ -15,6 +16,9 @@
 
     system.stateVersion = "23.11";
 
-    users.users = import ./users.nix;
+    users.users = import ./users.nix {
+        config = config;
+        pkgs = pkgs;
+    };
     services = import ./services.nix;
 }

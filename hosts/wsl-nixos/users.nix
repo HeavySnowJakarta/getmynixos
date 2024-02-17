@@ -1,6 +1,9 @@
 # This file defines how many users does WSL has.
 
 # Default settings for all users.
+
+{config, pkgs, ...}:
+
 let
     default = {
         isNormalUser = true;
