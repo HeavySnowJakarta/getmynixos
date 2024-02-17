@@ -30,5 +30,5 @@
 
         # Default editor
         variables.EDITOR = "nano";
-    }
+    };
 }
