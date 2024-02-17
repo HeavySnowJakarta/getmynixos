@@ -2,11 +2,13 @@
 # defined on directory `hosts`. This file is to decide which one to use
 # due to `options.nix`.
 
-{type, is_NixOS}:
+# parameters includes `nixpkgs`.
+
+{type, is_NixOS, parameters}:
 
 if
     type=="wsl" && is_NixOS
 then
-    import ../hosts/wsl-nixos
+    import ../hosts/wsl-nixos parameters
 else
     abort "No type matched."
