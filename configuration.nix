@@ -31,17 +31,17 @@
 
         # !Expanded part start
         # system.stateVersion = "23.11";
-        users.users.user = {
-            isNormalUser = true;
-            description = "All your base are belong to us.";
-            extraGroups = [
-                "wheel"
-                "networkmanager"
-            ];
+        #users.users.user = {
+        #    isNormalUser = true;
+        #    description = "All your base are belong to us.";
+        #    extraGroups = [
+        #        "wheel"
+        #        "networkmanager"
+        #    ];
 
-            packages = with pkgs;[
-                fish
-            ];
-        };
+        #    packages = with pkgs;[
+        #        fish
+        #    ];
+        #};
     };
 }
