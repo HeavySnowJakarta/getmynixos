@@ -10,21 +10,21 @@
         experimental-features =
             ["flakes" "nix-command"];
 
-        # Binary cache configuration
-        trusted-users = ["user"];
-        sustituters = ["https://cache.nixos.org"];
-        #trusted-public-keys = import ./config/binary_cache_key.nix;
+    #    # Binary cache configuration
+    #    trusted-users = ["user"];
+    #    sustituters = ["https://cache.nixos.org"];
+    #    #trusted-public-keys = import ./config/binary_cache_key.nix;
     };
 
     # Core environment configuration
-    environment = {
+    #environment = {
         # Core relied packages
-        systemPackages = with pkgs; [
-            git
-            nano
-            wget
-            curl
-        ];
+    #    systemPackages = with pkgs; [
+    #        git
+    #        nano
+    #        wget
+    #        curl
+    #    ];
 
         # Default editor
         variables.EDITOR = "nano";
@@ -43,5 +43,11 @@
         #        fish
         #    ];
         #};
-    };
+        # !end
+
+        wsl = {
+            enable = true;
+            defaultUser = "user";
+        };
+    #};
 }
