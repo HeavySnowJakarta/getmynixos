@@ -6,20 +6,20 @@
 
 {
     # Enable flakes and other experimental features.
-    #nix.settings = {
-    #    experimental-features =
-    #        ["flakes" "nix-command"];
+    nix.settings = {
+        experimental-features =
+            ["flakes" "nix-command"];
 
     #    # Binary cache configuration
     #    trusted-users = ["user"];
     #    sustituters = ["https://cache.nixos.org"];
     #    #trusted-public-keys = import ./config/binary_cache_key.nix;
-    #};
+    };
 
     # ! Expand start
-    imports = [
-        <nixos-wsl/modules>
-    ];
+    #imports = [
+    #    <nixos-wsl/modules>
+    #];
     # ! end
 
     # Core environment configuration
