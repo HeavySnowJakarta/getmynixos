@@ -17,7 +17,7 @@
     };
 
     # Core environment configuration
-    #environment = {
+    environment = {
         # Core relied packages
     #    systemPackages = with pkgs; [
     #        git
@@ -27,10 +27,10 @@
     #    ];
 
         # Default editor
-        variables.EDITOR = "nano";
+    #    variables.EDITOR = "nano";
 
         # !Expanded part start
-        # system.stateVersion = "23.11";
+        system.stateVersion = "23.11";
         #users.users.user = {
         #    isNormalUser = true;
         #    description = "All your base are belong to us.";
@@ -49,5 +49,5 @@
             enable = true;
             defaultUser = "user";
         };
-    #};
+    };
 }
