@@ -6,6 +6,5 @@ Current valid contents:
 
 ```
 .
-├configuration.nix
-└flake.nix
+└configuration.nix
 ```
