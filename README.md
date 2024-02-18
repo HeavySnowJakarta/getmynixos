@@ -6,7 +6,8 @@ Current valid contents:
 
 ```
 .
-└configuration.nix
+├configuration.nix
+└flake.nix
 ```
 
 ## Known commits with no problem
