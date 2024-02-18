@@ -52,8 +52,8 @@
 
     };
     system.stateVersion = "23.11";
-    wsl = {
-        enable = true;
-        defaultUser = "user";
-    };
+    #wsl = {
+    #    enable = true;
+    #    defaultUser = "user";
+    #};
 }
