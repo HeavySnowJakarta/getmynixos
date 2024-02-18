@@ -8,14 +8,12 @@
     # Enable flakes and other experimental features.
     nix.settings = {
         experimental-features =
-            ["flakes"]
-            ++
-            import ./config/nix_exp_features.nix;
+            ["flakes" "nix-command"];
 
         # Binary cache configuration
-        trusted-users = import ./config/user_list.nix;
-        sustituters = import ./config/binary_cache_url.nix;
-        trusted-public-keys = import ./config/binary_cache_key.nix;
+        trusted-users = ["user"];
+        sustituters = ["https://cache.nixos.org"];
+        #trusted-public-keys = import ./config/binary_cache_key.nix;
     };
 
     # Core environment configuration
@@ -30,5 +28,20 @@
 
         # Default editor
         variables.EDITOR = "nano";
+
+        # !Expanded part start
+        system.stateVersion = "23.11";
+        users.users.user = {
+            isNormalUser = true;
+            description = "All your base are belong to us.";
+            extraGroups = [
+                "wheel"
+                "networkmanager"
+            ];
+
+            packages = with pkgs;[
+                fish
+            ];
+        };
     };
 }
