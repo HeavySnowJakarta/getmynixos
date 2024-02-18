@@ -30,7 +30,6 @@
     #    variables.EDITOR = "nano";
 
         # !Expanded part start
-        system.stateVersion = "23.11";
         #users.users.user = {
         #    isNormalUser = true;
         #    description = "All your base are belong to us.";
@@ -45,9 +44,10 @@
         #};
         # !end
 
-        wsl = {
-            enable = true;
-            defaultUser = "user";
-        };
+    };
+    system.stateVersion = "23.11";
+    wsl = {
+        enable = true;
+        defaultUser = "user";
     };
 }
